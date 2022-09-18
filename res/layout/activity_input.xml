@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/navback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#919191"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/actionModeCloseDrawable"
+        app:title="Add Hewan"
+        app:titleTextColor="#000000" />
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="670dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navback"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Age"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/type"
+                    app:layout_constraintTop_toBottomOf="@+id/type">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Usia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Usia" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/type"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="10dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/Nama"
+                    app:layout_constraintTop_toBottomOf="@+id/Nama">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Jenis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Jenis"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Nama"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="1dp"
+                    app:boxCornerRadiusBottomEnd="15dp"
+                    app:boxCornerRadiusBottomStart="15dp"
+                    app:boxCornerRadiusTopEnd="15dp"
+                    app:boxCornerRadiusTopStart="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/Name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/Save"
+                    android:layout_width="185dp"
+                    android:layout_height="48dp"
+                    android:text="save"
+                    app:layout_constraintEnd_toEndOf="@+id/Age"
+                    app:layout_constraintStart_toStartOf="@+id/Age"
+                    app:layout_constraintTop_toBottomOf="@+id/Age" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
